@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>15-Puzzle</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <script type="text/javascript">
+        function play() {
+            
+        }
+        function one() {
+            var image = document.getElementById("1").src;
+            if (document.getElementById("5").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("1").src = "blank.png";
+                document.getElementById("5").src = image;
+            }
+            else if (document.getElementById("2").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("2").src = image;
+                document.getElementById("1").src = "blank.png";
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function two() {
+            var image = document.getElementById("2").src;
+            if (document.getElementById("1").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("1").src = image;
+                document.getElementById("2").src = "blank.png";
+            }
+            else if (document.getElementById("3").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("2").src = "blank.png";
+                document.getElementById("3").src = image;
+            }
+            else if (document.getElementById("6").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("2").src = "blank.png";
+                document.getElementById("6").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function three() {
+            var image = document.getElementById("3").src;
+            if (document.getElementById("2").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("2").src = image;
+                document.getElementById("3").src = "blank.png";
+            }
+            else if (document.getElementById("4").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("3").src = "blank.png";
+                document.getElementById("4").src = image;
+            }
+            else if (document.getElementById("7").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("3").src = "blank.png";
+                document.getElementById("7").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function four() {
+            var image = document.getElementById("4").src;
+            if (document.getElementById("3").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("3").src = image;
+                document.getElementById("4").src = "blank.png";
+            }
+            else if (document.getElementById("8").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("4").src = "blank.png";
+                document.getElementById("8").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function five() {
+            var image = document.getElementById("5").src;
+            if (document.getElementById("1").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("1").src = image;
+                document.getElementById("5").src = "blank.png";
+            }
+            else if (document.getElementById("6").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("6").src = image;
+                document.getElementById("5").src = "blank.png";
+            }
+            else if (document.getElementById("9").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("5").src = "blank.png";
+                document.getElementById("9").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function six() {
+            var image = document.getElementById("6").src;
+            if (document.getElementById("2").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("2").src = image;
+                document.getElementById("6").src = "blank.png";
+            }
+            else if (document.getElementById("5").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("6").src = "blank.png";
+                document.getElementById("5").src = image;
+            }
+            else if (document.getElementById("7").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("6").src = "blank.png";
+                document.getElementById("7").src = image;
+            }
+            else if (document.getElementById("10").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("6").src = "blank.png";
+                document.getElementById("10").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function seven() {
+            var image = document.getElementById("7").src;
+            if (document.getElementById("3").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("3").src = image;
+                document.getElementById("7").src = "blank.png";
+            }
+            else if (document.getElementById("6").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("7").src = "blank.png";
+                document.getElementById("6").src = image;
+            }
+            else if (document.getElementById("8").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("7").src = "blank.png";
+                document.getElementById("8").src = image;
+            }
+            else if (document.getElementById("11").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("7").src = "blank.png";
+                document.getElementById("11").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function eight() {
+            var image = document.getElementById("8").src;
+            if (document.getElementById("4").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("4").src = image;
+                document.getElementById("8").src = "blank.png";
+            }
+            else if (document.getElementById("7").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("8").src = "blank.png";
+                document.getElementById("7").src = image;
+            }
+            else if (document.getElementById("12").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("8").src = "blank.png";
+                document.getElementById("12").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function nine() {
+            var image = document.getElementById("9").src;
+            if (document.getElementById("5").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("5").src = image;
+                document.getElementById("9").src = "blank.png";
+            }
+            else if (document.getElementById("10").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("9").src = "blank.png";
+                document.getElementById("10").src = image;
+            }
+            else if (document.getElementById("13").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("9").src = "blank.png";
+                document.getElementById("13").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function ten() {
+            var image = document.getElementById("10").src;
+            if (document.getElementById("6").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("6").src = image;
+                document.getElementById("10").src = "blank.png";
+            }
+            else if (document.getElementById("9").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("10").src = "blank.png";
+                document.getElementById("9").src = image;
+            }
+            else if (document.getElementById("11").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("10").src = "blank.png";
+                document.getElementById("11").src = image;
+            }
+            else if (document.getElementById("14").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("10").src = "blank.png";
+                document.getElementById("14").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function eleven() {
+            var image = document.getElementById("11").src;
+            if (document.getElementById("7").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("7").src = image;
+                document.getElementById("11").src = "blank.png";
+            }
+            else if (document.getElementById("10").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("11").src = "blank.png";
+                document.getElementById("10").src = image;
+            }
+            else if (document.getElementById("12").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("11").src = "blank.png";
+                document.getElementById("12").src = image;
+            }
+            else if (document.getElementById("15").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("11").src = "blank.png";
+                document.getElementById("15").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function twelve() {
+            var image = document.getElementById("12").src;
+            if (document.getElementById("8").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("8").src = image;
+                document.getElementById("12").src = "blank.png";
+            }
+            else if (document.getElementById("11").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("12").src = "blank.png";
+                document.getElementById("11").src = image;
+            }
+            else if (document.getElementById("blank").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("12").src = "blank.png";
+                document.getElementById("blank").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function thirteen() {
+            var image = document.getElementById("13").src;
+            if (document.getElementById("9").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("9").src = image;
+                document.getElementById("13").src = "blank.png";
+            }
+            else if (document.getElementById("14").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("13").src = "blank.png";
+                document.getElementById("14").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function fourteen() {
+            var image = document.getElementById("14").src;
+            if (document.getElementById("10").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("10").src = image;
+                document.getElementById("14").src = "blank.png";
+            }
+            else if (document.getElementById("13").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("14").src = "blank.png";
+                document.getElementById("13").src = image;
+            }
+            else if (document.getElementById("15").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("14").src = "blank.png";
+                document.getElementById("15").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function fifteen() {
+            var image = document.getElementById("15").src;
+            if (document.getElementById("11").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("11").src = image;
+                document.getElementById("15").src = "blank.png";
+            }
+            else if (document.getElementById("14").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("15").src = "blank.png";
+                document.getElementById("14").src = image;
+            }
+            else if (document.getElementById("blank").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("15").src = "blank.png";
+                document.getElementById("blank").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+        function sixteen() {
+            var image = document.getElementById("blank").src;
+            if (document.getElementById("12").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("12").src = image;
+                document.getElementById("blank").src = "blank.png";
+            }
+            else if (document.getElementById("15").src == "file:///Users/shawaiz/Desktop/School/SDD/Major%20Project/blank.png") {
+                document.getElementById("blank").src = "blank.png";
+                document.getElementById("15").src = image;
+            }
+            else {
+                alert("Not a Valid Move");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form id="input">
+        <h1>15-Puzzle</h1>
+
+        <table class="gameboard">
+            <tr>
+                <td>
+                    <image id="1" onclick="one()" src="1.png" class="gameboard"/></td>
+                <td>
+                    <image id="2" onclick="two()" src="2.png" class="gameboard" /></td>
+                <td>
+                    <image id="3" onclick="three()" src="3.png" class="gameboard" /></td>
+                <td>
+                    <image id="4" onclick="four()" src="4.png" class="gameboard" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <image id="5" onclick="five()" src="5.png" class="gameboard" /></td>
+                <td>
+                    <image id="6" onclick="six()" src="6.png" class="gameboard" /></td>
+                <td>
+                    <image id="7" onclick="seven()" src="7.png" class="gameboard" /></td>
+                <td>
+                    <image id="8" onclick="eight()" src="8.png" class="gameboard" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <image id="9" onclick="nine()" src="9.png" class="gameboard" /></td>
+                <td>
+                    <image id="10" onclick="ten()" src="10.png" class="gameboard" /></td>
+                <td>
+                    <image id="11" onclick="eleven()" src="11.png" class="gameboard" /></td>
+                <td>
+                    <image id="12" onclick="twelve()" src="12.png" class="gameboard" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <image id="13" onclick="thirteen()" src="13.png" class="gameboard" /></td>
+                <td>
+                    <image id="14" onclick="fourteen()" src="14.png" class="gameboard" /></td>
+                <td>
+                    <image id="15" onclick="fifteen()" src="15.png" class="gameboard" /></td>
+                <td>
+                    <image id="blank" onclick="sixteen()" src="blank.png" class="gameboard" /></td>
+            </tr>
+
+        </table>
+        <button onclick="play()">Play</button>
+        <div>Time:</div> <span id="time">0</span>
+        <p>Moves:</p> <span2>0</span2>
+    </form>
+</body>
+</html>
