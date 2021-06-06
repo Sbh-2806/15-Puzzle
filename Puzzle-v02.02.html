@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>15-Puzzle</title>
+<style type="text/css">
+body {
+  background-color: #D0B7DA;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 90px 90px 90px 90px;
+  grid-template-rows: 90px 90px 90px 90px;
+  padding: 10px;
+  background-color: #065357;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.grid-item {
+  background-color: #9BC9AF;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 25px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.play {
+  width: 70px;
+  height: 50px;
+  background-color: green;
+  font-size: 24px;
+  font-weight: bold;
+  color: yellow;
+  position: absolute;
+  text-align: center;
+  top: 66%;
+  right: 58.3%;
+}
+.time {
+  position: absolute;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  right: 53%;
+  bottom: 29%; 
+}
+.countlabel {
+  position: absolute;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  right: 42%;
+  bottom: 29%; 
+}
+.timer {
+  position: absolute;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  right: 51%;
+  bottom: 29%; 
+}
+.counter {
+  position: absolute;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  right: 40%;
+  bottom: 29%; 
+}
+</style>
+<script type="text/javascript">
+  function one() {
+    var number = document.getElementById('1').innerHTML;
+    var count = parseInt(document.getElementById('counter').innerHTML);
+    if (document.getElementById('2').innerHTML == " ") {
+      document.getElementById('2').innerHTML = number;
+      document.getElementById('1').innerHTML = " ";
+    }
+    else if (document.getElementById('5').innerHTML == " ") {
+      document.getElementById('5').innerHTML = number;
+      document.getElementById('1').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function two() {
+    var number = document.getElementById('2').innerHTML;
+    if (document.getElementById('1').innerHTML == " ") {
+      document.getElementById('1').innerHTML = number;
+      document.getElementById('2').innerHTML = " ";
+    }
+    else if (document.getElementById('3').innerHTML == " ") {
+      document.getElementById('3').innerHTML = number;
+      document.getElementById('2').innerHTML = " ";
+    }
+    else if (document.getElementById('6').innerHTML == " ") {
+      document.getElementById('6').innerHTML = number;
+      document.getElementById('2').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function three() {
+    var number = document.getElementById('3').innerHTML;
+    if (document.getElementById('2').innerHTML == " ") {
+      document.getElementById('2').innerHTML = number;
+      document.getElementById('3').innerHTML = " ";
+    }
+    else if (document.getElementById('4').innerHTML == " ") {
+      document.getElementById('4').innerHTML = number;
+      document.getElementById('3').innerHTML = " ";
+    }
+    else if (document.getElementById('7').innerHTML == " ") {
+      document.getElementById('7').innerHTML = number;
+      document.getElementById('3').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function four() {
+    var number = document.getElementById('4').innerHTML;
+    if (document.getElementById('3').innerHTML == " ") {
+      document.getElementById('3').innerHTML = number;
+      document.getElementById('4').innerHTML = " ";
+    }
+    else if (document.getElementById('8').innerHTML == " ") {
+      document.getElementById('8').innerHTML = number;
+      document.getElementById('4').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function five() {
+    var number = document.getElementById('5').innerHTML;
+    if (document.getElementById('1').innerHTML == " ") {
+      document.getElementById('1').innerHTML = number;
+      document.getElementById('5').innerHTML = " ";
+    }
+    else if (document.getElementById('6').innerHTML == " ") {
+      document.getElementById('6').innerHTML = number;
+      document.getElementById('5').innerHTML = " ";
+    }
+    else if (document.getElementById('9').innerHTML == " ") {
+      document.getElementById('9').innerHTML = number;
+      document.getElementById('5').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function six() {
+    var number = document.getElementById('6').innerHTML;
+    if (document.getElementById('2').innerHTML == " ") {
+      document.getElementById('2').innerHTML = number;
+      document.getElementById('6').innerHTML = " ";
+    }
+    else if (document.getElementById('5').innerHTML == " ") {
+      document.getElementById('5').innerHTML = number;
+      document.getElementById('6').innerHTML = " ";
+    }
+    else if (document.getElementById('7').innerHTML == " ") {
+      document.getElementById('7').innerHTML = number;
+      document.getElementById('6').innerHTML = " ";
+    }
+    else if (document.getElementById('10').innerHTML == " ") { 
+      document.getElementById('10').innerHTML = number;
+      document.getElementById('6').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function seven() {
+    var number = document.getElementById('7').innerHTML;
+    if (document.getElementById('3').innerHTML == " ") {
+      document.getElementById('3').innerHTML = number;
+      document.getElementById('7').innerHTML = " ";
+    }
+    else if (document.getElementById('6').innerHTML == " ") {
+      document.getElementById('6').innerHTML = number;
+      document.getElementById('7').innerHTML = " ";
+    }
+    else if (document.getElementById('8').innerHTML == " ") {
+      document.getElementById('8').innerHTML = number;
+      document.getElementById('7').innerHTML = " ";
+    }
+    else if (document.getElementById('11').innerHTML == " ") { 
+      document.getElementById('11').innerHTML = number;
+      document.getElementById('7').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function eight() {
+    var number = document.getElementById('8').innerHTML;
+    if (document.getElementById('4').innerHTML == " ") {
+      document.getElementById('4').innerHTML = number;
+      document.getElementById('8').innerHTML = " ";
+    }
+    else if (document.getElementById('7').innerHTML == " ") {
+      document.getElementById('7').innerHTML = number;
+      document.getElementById('8').innerHTML = " ";
+    }
+    else if (document.getElementById('12').innerHTML == " ") {
+      document.getElementById('12').innerHTML = number;
+      document.getElementById('8').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function nine() {
+    var number = document.getElementById('9').innerHTML;
+    if (document.getElementById('5').innerHTML == " ") {
+      document.getElementById('5').innerHTML = number;
+      document.getElementById('9').innerHTML = " ";
+    }
+    else if (document.getElementById('10').innerHTML == " ") {
+      document.getElementById('10').innerHTML = number;
+      document.getElementById('9').innerHTML = " ";
+    }
+    else if (document.getElementById('13').innerHTML == " ") {
+      document.getElementById('13').innerHTML = number;
+      document.getElementById('9').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function ten() {
+    var number = document.getElementById('10').innerHTML;
+    if (document.getElementById('6').innerHTML == " ") {
+      document.getElementById('6').innerHTML = number;
+      document.getElementById('10').innerHTML = " ";
+    }
+    else if (document.getElementById('9').innerHTML == " ") {
+      document.getElementById('9').innerHTML = number;
+      document.getElementById('10').innerHTML = " ";
+    }
+    else if (document.getElementById('11').innerHTML == " ") {
+      document.getElementById('11').innerHTML = number;
+      document.getElementById('10').innerHTML = " ";
+    }
+    else if (document.getElementById('14').innerHTML == " ") { 
+      document.getElementById('14').innerHTML = number;
+      document.getElementById('10').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function eleven() {
+    var number = document.getElementById('11').innerHTML;
+    if (document.getElementById('7').innerHTML == " ") {
+      document.getElementById('7').innerHTML = number;
+      document.getElementById('11').innerHTML = " ";
+    }
+    else if (document.getElementById('10').innerHTML == " ") {
+      document.getElementById('10').innerHTML = number;
+      document.getElementById('11').innerHTML = " ";
+    }
+    else if (document.getElementById('12').innerHTML == " ") {
+      document.getElementById('12').innerHTML = number;
+      document.getElementById('11').innerHTML = " ";
+    }
+    else if (document.getElementById('15').innerHTML == " ") { 
+      document.getElementById('15').innerHTML = number;
+      document.getElementById('11').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function twelve() {
+    var number = document.getElementById('12').innerHTML;
+    if (document.getElementById('8').innerHTML == " ") {
+      document.getElementById('8').innerHTML = number;
+      document.getElementById('12').innerHTML = " ";
+    }
+    else if (document.getElementById('11').innerHTML == " ") {
+      document.getElementById('11').innerHTML = number;
+      document.getElementById('12').innerHTML = " ";
+    }
+    else if (document.getElementById('blank').innerHTML == " ") {
+      document.getElementById('blank').innerHTML = number;
+      document.getElementById('12').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function thirteen() {
+    var number = document.getElementById('13').innerHTML;
+    if (document.getElementById('9').innerHTML == " ") {
+      document.getElementById('9').innerHTML = number;
+      document.getElementById('13').innerHTML = " ";
+    }
+    else if (document.getElementById('14').innerHTML == " ") {
+      document.getElementById('14').innerHTML = number;
+      document.getElementById('13').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function fourteen() {
+    var number = document.getElementById('14').innerHTML;
+    if (document.getElementById('10').innerHTML == " ") {
+      document.getElementById('10').innerHTML = number;
+      document.getElementById('14').innerHTML = " ";
+    }
+    else if (document.getElementById('13').innerHTML == " ") {
+      document.getElementById('13').innerHTML = number;
+      document.getElementById('14').innerHTML = " ";
+    }
+    else if (document.getElementById('15').innerHTML == " ") {
+      document.getElementById('15').innerHTML = number;
+      document.getElementById('14').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function fifteen() {
+    var number = document.getElementById('15').innerHTML;
+    if (document.getElementById('11').innerHTML == " ") {
+      document.getElementById('11').innerHTML = number;
+      document.getElementById('15').innerHTML = " ";
+    }
+    else if (document.getElementById('14').innerHTML == " ") {
+      document.getElementById('14').innerHTML = number;
+      document.getElementById('15').innerHTML = " ";
+    }
+    else if (document.getElementById('blank').innerHTML == " ") {
+      document.getElementById('blank').innerHTML = number;
+      document.getElementById('15').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+  function blank() {
+    var number = document.getElementById('blank').innerHTML;
+    if (document.getElementById('12').innerHTML == " ") {
+      document.getElementById('12').innerHTML = number;
+      document.getElementById('blank').innerHTML = " ";
+    }
+    else if (document.getElementById('15').innerHTML == " ") {
+      document.getElementById('15').innerHTML = number;
+      document.getElementById('blank').innerHTML = " ";
+    }
+    else {
+      alert("Not a Valid Move!!");
+    }
+  }
+</script>
+</head>
+<body>
+  <h1>15-Puzzle</h1>
+  <div class="grid">
+    <button class="grid-item" id="1" onclick="one()">1</button>
+    <button class="grid-item" id="2" onclick="two()">2</button>
+    <button class="grid-item" id="3" onclick="three()">3</button>  
+    <button class="grid-item" id="4" onclick="four()">4</button>
+    <button class="grid-item" id="5" onclick="five()">5</button>
+    <button class="grid-item" id="6" onclick="six()">6</button>  
+    <button class="grid-item" id="7" onclick="seven()">7</button>
+    <button class="grid-item" id="8" onclick="eight()">8</button>
+    <button class="grid-item" id="9" onclick="nine()">9</button>  
+    <button class="grid-item" id="10" onclick="ten()">10</button> 
+    <button class="grid-item" id="11" onclick="eleven()">11</button> 
+    <button class="grid-item" id="12" onclick="twelve()">12</button> 
+    <button class="grid-item" id="13" onclick="thirteen()">13</button> 
+    <button class="grid-item" id="14" onclick="fourteen()">14</button> 
+    <button class="grid-item" id="15" onclick="fifteen()">15</button> 
+    <button class="grid-item" id="blank" onclick="blank()"> </button> 
+  </div>
+  <button id="play" class="play" onclick="play()">Play</button>
+  <div id="time" class="time">Time: </div>
+  <div id="timer" class="timer"> 0</div>
+  <div id="countlabel" class="countlabel">Counter: </div>
+  <div id="counter" class="counter"> 0</div>
+
+</body>
+</html>
