@@ -11,7 +11,7 @@ body {
   display: grid;
   grid-template-columns: 90px 90px 90px 90px;
   grid-template-rows: 90px 90px 90px 90px;
-  padding: 10px;
+  padding: 15px;
   background-color: #D92387;
   position: absolute;
   top: 40%;
@@ -27,6 +27,7 @@ body {
   text-align: center;
   font-weight: bold;
 }
+
 .play {
   width: 70px;
   height: 50px;
@@ -34,46 +35,31 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #BF3434;
-  position: relative;
   text-align: center;
-  top: 410px;
-  left: 522px;
 }
 .time {
-  position: relative;
-  justify-content: space-between;
+  justify-content: stretch;
   font-size: 20px;
   font-weight: bold;
   color: #D0F252;
-  left: 550px;
-  top: 408px; 
 }
 .countlabel {
-  position: relative;
   justify-content: space-between;
   font-size: 20px;
   font-weight: bold;
   color: #D0F252;
-  left: 628px;
-  top: 408px; 
 }
 .timer {
-  position: relative;
   justify-content: space-between;
   font-size: 20px;
   font-weight: bold;
-  color: #D0F252;
-  left: 575px;
-  top: 408px; 
+  color: #D0F252; 
 }
 .counter {
-  position: relative;
   justify-content: space-between;
   font-size: 20px;
   font-weight: bold;
-  color: #D0F252;
-  left: 645px;
-  top: 408px; 
+  color: #D0F252; 
 }
 .how-to {
   position: absolute;
@@ -549,7 +535,7 @@ body {
 </script>
 </head>
 <body>
-  <h1 style="color: white;">15-Puzzle</h1>
+  <h1 style="color: white;" id="heading">15-Puzzle</h1>
   <div class="grid">
     <button class="grid-item" id="1" onclick="one()">1</button>
     <button class="grid-item" id="2" onclick="two()">2</button>
@@ -567,16 +553,18 @@ body {
     <button class="grid-item" id="14" onclick="fourteen()">14</button> 
     <button class="grid-item" id="15" onclick="fifteen()">15</button> 
     <button class="grid-item" id="blank" onclick="blank()"> </button> 
+    <div class="button">
+      <button id="play" class="play" onclick="play()">Play</button>
+    </div>
+    <div class="labels">
+      <span id="time" class="time">Time: </span>
+      <span id="timer" class="timer"> 0</span>
+      <span id="countlabel" class="countlabel">Moves: </span>
+      <span id="counter" class="counter"> 0</span> 
+    </div>
   </div>
-  <div class="footer">
-    <button id="play" class="play" onclick="play()">Play</button>
-    <span id="time" class="time">Time: </span>
-    <span id="timer" class="timer"> 0</span>
-    <span id="countlabel" class="countlabel">Moves: </span>
-    <span id="counter" class="counter"> 0</span>
-  </div>
-  <h2 class="how-to">How To Play:</h2>
-  <p class="explanation">The aim of the game is to rearrange the tiles back into order by sliding them. Click on a tile next to an empty spot to slide it.</p>
+  <h2 class="how-to" id="how-to">How To Play:</h2>
+  <p class="explanation" id="explanation">The aim of the game is to rearrange the tiles back into order by sliding them. Click on a tile next to an empty spot to slide it.</p>
 
 </body>
 </html>
